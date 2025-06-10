@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap");
 
 @import "tailwindcss";
 
@@ -7,17 +7,22 @@
 	--breakpoint-xs: 425px;
 
 	/* Fonts */
-	--font-roboto: "Roboto Condensed", system-ui, Avenir, Helvetica, Arial, sans-serif;
+	--font-gowun: "Gowun Batang", system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+* {
+	@apply outline-none;
 }
 
 :root {
-	@apply bg-neutral-200 dark:bg-neutral-900 text-black dark:text-white transition-colors duration-300 ease-in-out overflow-y-scroll;
+	/* @apply bg-neutral-900 text-white transition-colors duration-300 ease-in-out overflow-y-scroll; */
+	@apply bg-neutral-950 bg-gradient-to-br from-green-600/10 via-yellow-600/10 to-red-600/10 backdrop-blur-3xl text-white text-justify transition-colors duration-300 ease-in-out overflow-y-scroll;
 }
 
 @layer base {
 	body {
 		scrollbar-width: thin;
-		@apply tracking-wide font-roboto;
+		@apply font-gowun font-normal;
 	}
 }
 
@@ -39,12 +44,11 @@ a:hover {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-	@apply bg-neutral-400 dark:bg-neutral-600;
+	@apply bg-neutral-600;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
 	@apply bg-neutral-600;
-	background: #555;
 }
 /* Sidebar Scrollbar End */
