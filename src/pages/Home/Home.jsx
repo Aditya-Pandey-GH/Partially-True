@@ -1,6 +1,6 @@
 import PlayButton from "./PlayButton";
 import SettingsButton from "./SettingsButton";
-import HelpButton from "./HelpButton";
+import HelpButton from "./AboutButton";
 
 const Home = () => {
 	return (
