@@ -1,6 +1,6 @@
 import PlayButton from "./PlayButton";
 import SettingsButton from "./SettingsButton";
-import HelpButton from "./AboutButton";
+import AboutButton from "./AboutButton";
 
 const Home = () => {
 	return (
@@ -16,7 +16,7 @@ const Home = () => {
 				<div className="flex flex-col gap-4">
 					<PlayButton />
 					<SettingsButton />
-					<HelpButton />
+					<AboutButton />
 				</div>
 			</div>
 		</>

@@ -12,7 +12,7 @@ const App = () => {
 	!localStorage.getItem("volume") && localStorage.setItem("volume", 1);
 	!localStorage.getItem("colDigits") && localStorage.setItem("colDigits", 1);
 	return (
-		<div className="w-full min-h-screen flex flex-col">
+		<div className="w-full min-h-dvh flex flex-col">
 			<BrowserRouter>
 				<Navbar />
 				<div style={{ flex: 1 }} className="flex">

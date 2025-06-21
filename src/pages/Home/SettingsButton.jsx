@@ -1,12 +1,10 @@
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const SettingsButton = () => {
-	const navigate = useNavigate();
 	return (
-		<button
+		<Link
+			to="/settings"
 			className="flex flex-row gap-4 bg-neutral-600 hover:bg-neutral-700 transition-colors text-base xs:text-lg md:text-xl xl:text-2xl font-bold px-8 py-4 rounded cursor-pointer"
-			onClick={() => navigate("/settings")}
-			// onClick={() => navigate("/settings", { replace: true })}
 		>
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="white" className="w-4">
 				<path
@@ -15,7 +13,7 @@ const SettingsButton = () => {
 				/>
 			</svg>
 			<span className="">Settings</span>
-		</button>
+		</Link>
 	);
 };
 

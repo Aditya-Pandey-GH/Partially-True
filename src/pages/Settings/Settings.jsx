@@ -83,7 +83,7 @@ const Settings = () => {
 						</section>
 
 						{/* Colored Digits */}
-						<h3 className="text-lg md:text-xl xl:text-2xl font-bold tracking-wider text-center xs:text-right">Colored Digits</h3>
+						{/* <h3 className="text-lg md:text-xl xl:text-2xl font-bold tracking-wider text-center xs:text-right">Colored Digits</h3>
 						<section className="flex flex-row justify-center items-center gap-8">
 							<div className="flex flex-row justify-center items-center gap-2">
 								<button
@@ -110,15 +110,15 @@ const Settings = () => {
 									<NextButton />
 								</button>
 							</div>
-						</section>
+						</section> */}
 
 						{/* Volume */}
-						<h3 className="text-lg md:text-xl xl:text-2xl font-bold tracking-wider text-center xs:text-right">Volume</h3>
+						{/* <h3 className="text-lg md:text-xl xl:text-2xl font-bold tracking-wider text-center xs:text-right">Volume</h3> */}
 						{/* <h3 className="text-lg md:text-xl xl:text-2xl font-bold tracking-wider text-right">Volume ({parseInt(volume * 100)}%)</h3> */}
 						{/* <h3 className="text-lg md:text-xl xl:text-2xl font-bold tracking-wider text-right flex flex-row justify-end items-center">
 							<span>Volume</span>(<span className="text-sm">{parseInt(volume * 100)}%</span>)
 						</h3> */}
-						<section className="flex flex-col justify-center items-center relative">
+						{/* <section className="flex flex-col justify-center items-center relative">
 							<input
 								id="volume"
 								type="range"
@@ -128,9 +128,6 @@ const Settings = () => {
 								value={volume}
 								onChange={handleVolumeChange}
 								className="cursor-pointer appearance-none w-full h-1/8 rounded-full"
-								// style={{
-								// 	background: `linear-gradient(to right, #22c55e ${volume * 100}%, #ef4444 ${volume * 100}%)`,
-								// }}
 								style={{
 									background: `linear-gradient(to right, rgb(
 									${Math.round(220 + (22 - 220) * volume)},
@@ -139,13 +136,10 @@ const Settings = () => {
 									) 100%)`,
 								}}
 							/>
-							{/* <label htmlFor="volume" className="text-sm absolute -bottom-2">
-								{parseInt(volume * 100)}%
-							</label> */}
 							<label htmlFor="volume" className="text-sm absolute -bottom-2">
 								({parseInt(volume * 100)}%)
 							</label>
-						</section>
+						</section> */}
 					</div>
 				</div>
 			</div>

@@ -1,23 +1,32 @@
 const Footer = () => {
 	return (
-		<nav className="flex flex-col md:flex-row justify-between items-center p-4">
+		<nav className="grid grid-cols-1 md:grid-cols-3 p-4 gap-2">
 			{/* Copyright */}
-			<a
-				href="https://github.com/Aditya-Pandey-GH/Partially-True/blob/main/LICENSE"
-				target="_blank"
-				className="w-fit text-center md:text-lg hover:opacity-75 transition-opacity xs:float-right"
-			>
-				Copyright © MIT License {new Date().getFullYear()}
-			</a>
+			<section className="flex flex-row justify-center md:justify-start gap-2">
+				<a
+					href="https://github.com/Aditya-Pandey-GH/Partially-True/blob/main/LICENSE"
+					target="_blank"
+					className="w-fit text-center md:text-lg hover:opacity-75 transition-opacity xs:float-right"
+				>
+					Copyright © MIT License {new Date().getFullYear()}
+				</a>
+			</section>
 
 			{/* Social Media */}
-			<section className="flex flex-row gap-2">
+			<section className="flex flex-row justify-center gap-4">
 				<a
 					href="https://github.com/Aditya-Pandey-GH"
 					target="_blank"
 					className="w-fit text-center md:text-lg hover:opacity-75 transition-opacity flex flex-row items-center gap-2"
 				>
-					<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" className="w-6 h-6">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="1024"
+						height="1024"
+						viewBox="0 0 1024 1024"
+						fill="none"
+						className="w-6 h-6 md:w-8 md:h-8"
+					>
 						<path
 							fillRule="evenodd"
 							clipRule="evenodd"
@@ -32,7 +41,7 @@ const Footer = () => {
 					target="_blank"
 					className="w-fit text-center md:text-lg hover:opacity-75 transition-opacity flex flex-row items-center gap-2"
 				>
-					<svg xmlns="http://www.w3.org/2000/svg" height="72" viewBox="4 4 64 64" width="72" className="w-6 h-6">
+					<svg xmlns="http://www.w3.org/2000/svg" height="72" viewBox="4 4 64 64" width="72" className="w-6 h-6 md:w-8 md:h-8">
 						<g fill="white" fillRule="evenodd">
 							<path d="M62,62 L51.315625,62 L51.315625,43.8021149 C51.315625,38.8127542 49.4197917,36.0245323 45.4707031,36.0245323 C41.1746094,36.0245323 38.9300781,38.9261103 38.9300781,43.8021149 L38.9300781,62 L28.6333333,62 L28.6333333,27.3333333 L38.9300781,27.3333333 L38.9300781,32.0029283 C38.9300781,32.0029283 42.0260417,26.2742151 49.3825521,26.2742151 C56.7356771,26.2742151 62,30.7644705 62,40.051212 L62,62 Z M16.349349,22.7940133 C12.8420573,22.7940133 10,19.9296567 10,16.3970067 C10,12.8643566 12.8420573,10 16.349349,10 C19.8566406,10 22.6970052,12.8643566 22.6970052,16.3970067 C22.6970052,19.9296567 19.8566406,22.7940133 16.349349,22.7940133 Z M11.0325521,62 L21.769401,62 L21.769401,27.3333333 L11.0325521,27.3333333 L11.0325521,62 Z" />
 						</g>
@@ -41,17 +50,19 @@ const Footer = () => {
 			</section>
 
 			{/* About the Developer */}
-			<a
-				href="https://aditya-pandey.vercel.app"
-				target="_blank"
-				className="w-fit text-center md:text-lg hover:opacity-75 transition-opacity flex flex-row items-center gap-2"
-			>
-				{/* !Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc. */}
-				<span>Aditya Pandey</span>
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="white" className="w-4">
-					<path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l82.7 0L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3l0 82.7c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160c0-17.7-14.3-32-32-32L320 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z" />
-				</svg>
-			</a>
+			<section className="flex flex-row justify-center md:justify-end gap-2">
+				<a
+					href="https://aditya-pandey.vercel.app"
+					target="_blank"
+					className="w-fit text-center md:text-lg hover:opacity-75 transition-opacity flex flex-row justify-center items-center gap-2"
+				>
+					{/* !Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc. */}
+					<span>Aditya Pandey</span>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="white" className="w-4">
+						<path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l82.7 0L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3l0 82.7c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160c0-17.7-14.3-32-32-32L320 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z" />
+					</svg>
+				</a>
+			</section>
 		</nav>
 	);
 };
