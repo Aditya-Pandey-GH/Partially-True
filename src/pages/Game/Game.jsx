@@ -146,6 +146,7 @@ const Game = () => {
 							</span>
 						)}
 					</div>
+					{/* Digits & Other Buttons */}
 					<div className="flex flex-col gap-4">
 						{/* Numbers */}
 						<div className="grid grid-cols-3 gap-2 font-mono font-bold text-black">
