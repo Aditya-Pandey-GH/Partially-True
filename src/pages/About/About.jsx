@@ -58,25 +58,32 @@ const About = () => {
 						{/* Color Scheme */}
 						<details className="flex flex-col text-justify gap-4">
 							<summary className="w-fit text-xl md:text-2xl xl:text-3xl font-bold tracking-wider cursor-pointer">
-								🎨 Color Scheme
+								🎨 Color Scheme (Hints)
 							</summary>
 							<div className="flex flex-col gap-4 text-base md:text-lg xl:text-xl">
-								The digits of the number you have chosen will be associated with a color, in such a manner that:
+								<span>
+									Each digits of the number you guessed will be associated with a hint and its respective color, in such a manner
+									that:
+								</span>
 								<ul className="list-disc list-inside flex flex-col gap-2 ml-4">
 									<li className="">
 										<span className="font-bold font-mono text-green-600 text-2xl">F </span>
-										<span>denotes that the digit is correct and is at the right place.</span>
+										<span>denotes that one of the digits chosen is correct and is at the right place.</span>
 									</li>
 									<li className="">
 										<span className="font-bold font-mono text-yellow-500 text-2xl">P </span>
-										<span>denotes that the digit is correct but is at the wrong place.</span>
+										<span>denotes that one of the digits chosen is correct but is at the wrong place.</span>
 									</li>
 									<li className="">
 										<span className="font-bold font-mono text-red-700 text-2xl">B </span>
-										<span>denotes that the digit is incorrect.</span>
+										<span>denotes that one of the digits chosen is incorrect.</span>
 									</li>
 								</ul>
-								{/* <em># Note that the digits may not be colored, depending upon the Difficuly level you have chosen.</em> */}
+								<span>
+									Keep in mind that the order of the digits needs not to be the same as the order of the hints. For example, if you
+									guess "1 2 3" and it generates "B P B" as the hint, it does not necessarily mean that 1 is Bagels, 2 is Pico and 3
+									is Bagels. It just means that one of the digits is Pico and the other 2 digits are Bagels.
+								</span>
 							</div>
 						</details>
 
@@ -141,9 +148,8 @@ const About = () => {
 									example, if you select 4 digits, every time you play the game, you have to guess a 4 digit number.
 								</li>
 								<li className="text-base md:text-lg xl:text-xl">
-									<strong>Difficulty</strong> setting determines the difficulty level of the game. It determines how many guesses
-									you have and how the coloring of digits in History panel would work. This is explained in detail in "Difficulty
-									Levels" section.
+									<strong>Difficulty</strong> setting determines the difficulty level of the game. Each difficulty level will give
+									you different number of guesses. This is explained in detail in the "Difficulty Levels" section.
 								</li>
 								{/* <li className="text-base md:text-lg xl:text-xl">
 									<strong>Colored Digits</strong> setting determines if the digits in History panel would be colored or not. Turning
