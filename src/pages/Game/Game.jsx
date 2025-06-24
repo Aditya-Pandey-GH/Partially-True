@@ -126,108 +126,132 @@ const Game = () => {
 					<h3 className="text-xl md:text-2xl xl:text-3xl font-bold tracking-wider">Game</h3>
 					{/* Digits */}
 					<div className="flex flex-row gap-2 border-2 p-2 border-black bg-neutral-300">
-						<span className="w-10 h-10 flex justify-center items-center bg-neutral-900 text-white rounded">{digits[0]}</span>
-						<span className="w-10 h-10 flex justify-center items-center bg-neutral-900 text-white rounded">{digits[1]}</span>
-						<span className="w-10 h-10 flex justify-center items-center bg-neutral-900 text-white rounded">{digits[2]}</span>
+						<span className="w-10 h-10 lg:w-12 lg:h-12 flex justify-center items-center bg-neutral-900 text-white rounded">
+							{digits[0]}
+						</span>
+						<span className="w-10 h-10 lg:w-12 lg:h-12 flex justify-center items-center bg-neutral-900 text-white rounded">
+							{digits[1]}
+						</span>
+						<span className="w-10 h-10 lg:w-12 lg:h-12 flex justify-center items-center bg-neutral-900 text-white rounded">
+							{digits[2]}
+						</span>
 						{digs > 3 && (
-							<span className="w-10 h-10 flex justify-center items-center bg-neutral-900 text-white rounded">{digits[3]}</span>
+							<span className="w-10 h-10 lg:w-12 lg:h-12 flex justify-center items-center bg-neutral-900 text-white rounded">
+								{digits[3]}
+							</span>
 						)}
 						{digs > 4 && (
-							<span className="w-10 h-10 flex justify-center items-center bg-neutral-900 text-white rounded">{digits[4]}</span>
+							<span className="w-10 h-10 lg:w-12 lg:h-12 flex justify-center items-center bg-neutral-900 text-white rounded">
+								{digits[4]}
+							</span>
 						)}
 					</div>
 					<div className="flex flex-col gap-4">
 						{/* Numbers */}
 						<div className="grid grid-cols-3 gap-2 font-mono font-bold text-black">
+							{[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map((num, index) => (
+								<button
+									className="w-10 h-10 lg:w-12 lg:h-12 flex justify-center items-center bg-gray-300 hover:bg-gray-400 active:bg-gray-400 transition-colors duration-200 rounded-full cursor-pointer"
+									key={index}
+									onClick={() => {
+										handleDigitClick(num);
+									}}
+								>
+									{num}
+								</button>
+							))}
+							{/* <div className="hidden">
+								<button
+									className="w-10 h-10 flex justify-center items-center bg-gray-300 hover:bg-gray-400 active:bg-gray-400 transition-colors duration-200 rounded-full cursor-pointer"
+									onClick={() => {
+										handleDigitClick(1);
+									}}
+								>
+									1
+								</button>
+								<button
+									className="w-10 h-10 flex justify-center items-center bg-gray-300 hover:bg-gray-400 active:bg-gray-400 transition-colors duration-200 rounded-full cursor-pointer"
+									onClick={() => {
+										handleDigitClick(2);
+									}}
+								>
+									2
+								</button>
+								<button
+									className="w-10 h-10 flex justify-center items-center bg-gray-300 hover:bg-gray-400 active:bg-gray-400 transition-colors duration-200 rounded-full cursor-pointer"
+									onClick={() => {
+										handleDigitClick(3);
+									}}
+								>
+									3
+								</button>
+								<button
+									className="w-10 h-10 flex justify-center items-center bg-gray-300 hover:bg-gray-400 active:bg-gray-400 transition-colors duration-200 rounded-full cursor-pointer"
+									onClick={() => {
+										handleDigitClick(4);
+									}}
+								>
+									4
+								</button>
+								<button
+									className="w-10 h-10 flex justify-center items-center bg-gray-300 hover:bg-gray-400 active:bg-gray-400 transition-colors duration-200 rounded-full cursor-pointer"
+									onClick={() => {
+										handleDigitClick(5);
+									}}
+								>
+									5
+								</button>
+								<button
+									className="w-10 h-10 flex justify-center items-center bg-gray-300 hover:bg-gray-400 active:bg-gray-400 transition-colors duration-200 rounded-full cursor-pointer"
+									onClick={() => {
+										handleDigitClick(6);
+									}}
+								>
+									6
+								</button>
+								<button
+									className="w-10 h-10 flex justify-center items-center bg-gray-300 hover:bg-gray-400 active:bg-gray-400 transition-colors duration-200 rounded-full cursor-pointer"
+									onClick={() => {
+										handleDigitClick(7);
+									}}
+								>
+									7
+								</button>
+								<button
+									className="w-10 h-10 flex justify-center items-center bg-gray-300 hover:bg-gray-400 active:bg-gray-400 transition-colors duration-200 rounded-full cursor-pointer"
+									onClick={() => {
+										handleDigitClick(8);
+									}}
+								>
+									8
+								</button>
+								<button
+									className="w-10 h-10 flex justify-center items-center bg-gray-300 hover:bg-gray-400 active:bg-gray-400 transition-colors duration-200 rounded-full cursor-pointer"
+									onClick={() => {
+										handleDigitClick(9);
+									}}
+								>
+									9
+								</button>
+								<button
+									className="w-10 h-10 flex justify-center items-center bg-gray-300 hover:bg-gray-400 active:bg-gray-400 transition-colors duration-200 rounded-full cursor-pointer"
+									onClick={() => {
+										handleDigitClick(0);
+									}}
+								>
+									0
+								</button>
+							</div> */}
 							<button
-								className="w-10 h-10 flex justify-center items-center bg-gray-300 hover:bg-gray-400 active:bg-gray-400 transition-colors duration-200 rounded-full cursor-pointer"
-								onClick={() => {
-									handleDigitClick(1);
-								}}
-							>
-								1
-							</button>
-							<button
-								className="w-10 h-10 flex justify-center items-center bg-gray-300 hover:bg-gray-400 active:bg-gray-400 transition-colors duration-200 rounded-full cursor-pointer"
-								onClick={() => {
-									handleDigitClick(2);
-								}}
-							>
-								2
-							</button>
-							<button
-								className="w-10 h-10 flex justify-center items-center bg-gray-300 hover:bg-gray-400 active:bg-gray-400 transition-colors duration-200 rounded-full cursor-pointer"
-								onClick={() => {
-									handleDigitClick(3);
-								}}
-							>
-								3
-							</button>
-							<button
-								className="w-10 h-10 flex justify-center items-center bg-gray-300 hover:bg-gray-400 active:bg-gray-400 transition-colors duration-200 rounded-full cursor-pointer"
-								onClick={() => {
-									handleDigitClick(4);
-								}}
-							>
-								4
-							</button>
-							<button
-								className="w-10 h-10 flex justify-center items-center bg-gray-300 hover:bg-gray-400 active:bg-gray-400 transition-colors duration-200 rounded-full cursor-pointer"
-								onClick={() => {
-									handleDigitClick(5);
-								}}
-							>
-								5
-							</button>
-							<button
-								className="w-10 h-10 flex justify-center items-center bg-gray-300 hover:bg-gray-400 active:bg-gray-400 transition-colors duration-200 rounded-full cursor-pointer"
-								onClick={() => {
-									handleDigitClick(6);
-								}}
-							>
-								6
-							</button>
-							<button
-								className="w-10 h-10 flex justify-center items-center bg-gray-300 hover:bg-gray-400 active:bg-gray-400 transition-colors duration-200 rounded-full cursor-pointer"
-								onClick={() => {
-									handleDigitClick(7);
-								}}
-							>
-								7
-							</button>
-							<button
-								className="w-10 h-10 flex justify-center items-center bg-gray-300 hover:bg-gray-400 active:bg-gray-400 transition-colors duration-200 rounded-full cursor-pointer"
-								onClick={() => {
-									handleDigitClick(8);
-								}}
-							>
-								8
-							</button>
-							<button
-								className="w-10 h-10 flex justify-center items-center bg-gray-300 hover:bg-gray-400 active:bg-gray-400 transition-colors duration-200 rounded-full cursor-pointer"
-								onClick={() => {
-									handleDigitClick(9);
-								}}
-							>
-								9
-							</button>
-							<button
-								className="w-10 h-10 flex justify-center items-center bg-gray-300 hover:bg-gray-400 active:bg-gray-400 transition-colors duration-200 rounded-full cursor-pointer"
-								onClick={() => {
-									handleDigitClick(0);
-								}}
-							>
-								0
-							</button>
-							<button
-								className="w-full h-10 col-span-2 flex justify-center items-center bg-red-600 hover:bg-red-700 active:bg-red-700 transition-colors duration-200 rounded-full cursor-pointer text-white"
+								className="w-full h-10 lg:h-12 col-span-2 flex justify-center items-center bg-red-600 hover:bg-red-700 active:bg-red-700 transition-colors duration-200 rounded-full cursor-pointer text-white"
 								onClick={handleACClick}
 							>
 								AC
 							</button>
 						</div>
+						{/* Check Button */}
 						<button
-							className="w-full h-10 col-span-3 flex justify-center items-center bg-green-600 hover:bg-green-700 active:bg-green-700 transition-colors duration-200 rounded-lg font-mono font-bold text-white cursor-pointer"
+							className="w-full h-10 lg:h-12 col-span-3 flex justify-center items-center bg-green-600 hover:bg-green-700 active:bg-green-700 transition-colors duration-200 rounded-lg font-mono font-bold text-white cursor-pointer"
 							onClick={handleCheckClick}
 						>
 							Check
@@ -238,7 +262,8 @@ const Game = () => {
 				{/* History Section */}
 				<section className="md:w-1/2 flex flex-col items-center gap-4 p-4">
 					<h3 className="text-xl md:text-2xl xl:text-3xl font-bold tracking-wider">History</h3>
-					<div className="flex flex-row items-center gap-4 md:gap-8">
+					<div className="flex flex-row items-center gap-4 md:gap-16">
+						{/* Digits */}
 						<div className="w-full h-full flex flex-col items-center gap-2 md:gap-4">
 							{history.length !== 0 && <h4 className="font-bold">Digits</h4>}
 							{history.map((histElem, histElemInd) => (
@@ -254,6 +279,7 @@ const Game = () => {
 								</div>
 							))}
 						</div>
+						{/* Hints */}
 						<div className="w-full h-full flex flex-col items-center gap-2 md:gap-4">
 							{hint.length !== 0 && <h4 className="font-bold">Hints</h4>}
 							{hint.map((hintElem, hintElemInd) => (
